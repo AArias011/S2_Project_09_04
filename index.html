@@ -1,41 +1,85 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-        <!-- Author: Anthony Arias
+    <!-- Author: Anthony Arias
         Date:   1/19/19
   
         Filename:   index.html -->
-  
+
     <meta charset="utf-8" />
     <title>Millennium Computers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="forms.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="forms.css" />
     <script src=" mc_script.js "></script>
 </head>
 
-    <header>
-        <img src="mc_logo.png" alt="Millennium Computers"/>
+<header>
+    <img src="mc_logo.png" alt="Millennium Computers" />
 
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My Cart</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="hnav1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Cart</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
 
 <section>
     <h1>Payment Form</h1>
-    
+
     <form action=" http://www.mill_computers.com/orders/process.cgi." method="post" name="cForm">
-    <fieldset>
-        <label for="">First Name</label>
-        <input type="text" name="fName" id="firstBox">
-    </fieldset>
+        <fieldset id="paymentForm">
+
+            <div class="formRow">
+                <label for="">First Name</label>
+                <input type="text" name="fName" id="firstBox" />
+            </div>
+
+            <div class="formRow">
+                <label for="">Last Name</label>
+                <input type="text" name="lName" id="lastBox" />
+            </div>
+
+
+            <div class="formRow">
+                <label for="">Street Address</label>
+                <input type="text" name="street" id="streetBox">
+            </div>
+
+
+            <div class="formRow">
+                <label for="">City</label>
+                <input type="text" name="city" id="cityBox" />
+            </div>
+
+            <div class="formRow">
+                <label for="">State</label>
+                <input type="text" name="state" id="stateBox" />
+            </div>
+
+            <div class="formRow">
+                <label for="">Zip Code</label>
+                <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" />
+            </div>
+
+            <div class="formRow">
+                <label for="">Phone Number</label>
+                <input type="text" name="phone" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ " />
+            </div>
+        </fieldset>
+        <fieldset>
+            <label for="">Processor Speed</label>
+            <select name="orderType" id="order">
+                <option value="order1"> 3.2 GHz</option>
+                <option value="order2"> 4.0 GHz</option>
+                <option value="order3"> 5.2 GH</option>
+            </select>
+        </fieldset>
     </form>
 </section>
 
