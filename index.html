@@ -17,7 +17,7 @@
 </head>
 
 <header>
-    <img src="mc_logo.png" alt="Millennium Computers" />
+    <img src="mc_logo.png" alt="Millennium Computers" id="logo" />
 
     <nav class="hnav1">
         <ul>
@@ -30,55 +30,145 @@
 </header>
 
 <section>
-    <h1>Payment Form</h1>
+    <h1>Submit Order Form</h1>
 
-    <form action=" http://www.mill_computers.com/orders/process.cgi." method="post" name="cForm">
-        <fieldset id="paymentForm">
-
+    <form id="survey" action=" http://www.mill_computers.com/orders/process.cgi." method="post" name="cForm">
+        <fieldset class="paymentForm">
+            <legend>Payment Form</legend>
             <div class="formRow">
-                <label for="">First Name</label>
+                <label class="text" for="">First Name*</label>
                 <input type="text" name="fName" id="firstBox" />
             </div>
 
             <div class="formRow">
-                <label for="">Last Name</label>
+                <label class="text" for="">Last Name*</label>
                 <input type="text" name="lName" id="lastBox" />
             </div>
 
 
             <div class="formRow">
-                <label for="">Street Address</label>
+                <label class="text" for="">Street Address*</label>
                 <input type="text" name="street" id="streetBox">
             </div>
 
 
             <div class="formRow">
-                <label for="">City</label>
+                <label class="text" for="">City*</label>
                 <input type="text" name="city" id="cityBox" />
             </div>
 
             <div class="formRow">
-                <label for="">State</label>
+                <label class="text" for="">State*</label>
                 <input type="text" name="state" id="stateBox" />
             </div>
 
             <div class="formRow">
-                <label for="">Zip Code</label>
-                <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" />
+                <label class="text" for="">Zip Code*</label>
+                <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" placeholder="nnnnn (-nnnn)" />
             </div>
 
             <div class="formRow">
-                <label for="">Phone Number</label>
-                <input type="text" name="phone" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ " />
+                <label class="text" for="">Phone Number*</label>
+                <input type="text" name="phone" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ "
+                    placeholder="(nnn) nnn-nnn" />
             </div>
         </fieldset>
-        <fieldset>
-            <label for="">Processor Speed</label>
-            <select name="orderType" id="order">
-                <option value="order1"> 3.2 GHz</option>
-                <option value="order2"> 4.0 GHz</option>
-                <option value="order3"> 5.2 GH</option>
-            </select>
+
+        <fieldset class="paymentForm">
+            <legend>Computer Build</legend>
+            <div class="object">
+                <label class="text" for="pSpeed">Processor Speed</label>
+                <select name="orderType" id="order">
+                    <option value="3.2 GHz"> 3.2 GHz</option>
+                    <option value="4.0 GHz"> 4.0 GHz</option>
+                    <option value="5.2 GHz"> 5.2 GHz</option>
+                </select>
+            </div>
+            <br>
+            <div class="object">
+                <label class="text" for="mem">Memory</label>
+                <select name="orderType" id="order">
+                    <option value="1 GB">1 GB</option>
+                    <option value="2 GB">2 GB</option>
+                    <option value="4 GB">4 GB</option>
+                    <option value="8 GB">8 GB</option>
+                </select>
+            </div>
+            <br>
+            <div class="object">
+                <label class="text" for="monitor">Monitor Size</label>
+                <select name="orderType" id="order">
+                    <option value="15">15"</option>
+                    <option value="17">17"</option>
+                    <option value="19">19"</option>
+                    <option value="21">21"</option>
+                </select>
+            </div>
+            <br>
+            <div class="object">
+                <label class="text" for="hd">Hard Drive</label>
+                <select name="orderType" id="order">
+                    <option value="240 GB">240 GB</option>
+                    <option value="500 GB">500 GB</option>
+                    <option value="750 GB">750 GB</option>
+                    <option value="1 TB">1 TB</option>
+                </select>
+            </div>
+            <br>
+            <div class="formRow">
+                <label class="text" for="dvd">DVD Burner</label>
+
+                <div>
+                    <label class="text" for="Yes">Yes</label>
+                    <input name="dvd" id="Yes" value="yes" type="radio">
+                </div>
+
+                <div>
+                    <label class="text" for="No">No</label>
+                    <input name="dvd" id="No" value="no" type="radio">
+                </div>
+
+            </div>
+            <br>
+            <div class="formRow">
+                <label class="text" for="tuner">Tuner Card</label>
+
+                <div>
+                    <label class="text" for="Yes">Yes</label>
+                    <input name="tuner" id="Yes" value="yes" type="radio">
+
+                </div>
+                <div>
+                    <label class="text" for="No">No</label>
+                    <input name="tuner" id="No" value="no" type="radio">
+                </div>
+
+            </div>
+            <br>
+            <div class="formRow">
+                <label class="text" for="mcard">Media Card Reader</label>
+
+                <div>
+                    <label class="text" for="Yes">Yes</label>
+                    <input name="media" id="Yes" value="yes" type="radio">
+
+                </div>
+                <div>
+                    <label class="text" for="No">No</label>
+                    <input name="media" id="No" value="no" type="radio">
+                </div>
+
+            </div>
+            <br>
+            <div>
+                <input name="mailMe" id="mailCB" value="yes" type="checkbox">
+                <label class="text" for="mailCB">Add a 24-month extended warranty.</label>
+            </div>
+            <br>
+            <div>
+                <label class="text" for="commBox">Additional informaion and comments:</label>
+                <textarea name="addInfo" id="commBox"></textarea>
+            </div>
         </fieldset>
     </form>
 </section>

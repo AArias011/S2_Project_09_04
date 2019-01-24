@@ -16,3 +16,50 @@ div.formRow>* {
       -webkit-flex: 1 1 150px;
       flex: 1 1 150px;
 }
+
+form#survey {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+
+form#survey>fieldset {
+      background-color: rgba(8, 53, 136, 0.648);
+      border-radius: 15px;
+      -webkit-flex: 1 1 300px;
+      flex: 1 1 300px;
+      font-size: 0.85em;
+      padding: 10px;
+      margin: 30px;
+      border: 1.5px solid rgb(247, 247, 75, 0.5);
+}
+
+div.object {
+      display: flex;
+      display: -webkit-flex;
+}
+
+div.object>* {
+      flex: 1 1 150px;
+      -webkit-flex: 1 1 150px;
+}
+
+form#survey {
+      padding-left: 150px;
+}
+
+/* Legend Styles */
+legend {
+      background-color: rgba(0, 0, 255, 0.5);
+      color: white;
+      padding: 5px;
+}
+
+/* Text Area Styles */
+textarea {
+      margin-top: 10px;
+      height: 100px;
+      width: 95%;
+}
