@@ -6,12 +6,13 @@
       Filename:  styles.css */
 
 /* HTML and Body Styles */
+/* This code gives the html a background picturem height and font-family. */
 html {
     background: url(keyboard.jpg) center center/cover fixed no-repeat;
     font-family: 'Times New Roman', Times, serif;
     height: 100%;
 }
-
+/* This code gives the body a background color, border, display of flex, flex-flow, position, margin and width. */
 body {
     background-color: rgba(255, 255, 255, 0.4);
     border-left: .5px solid white;
@@ -28,17 +29,18 @@ body {
 }
 
 /* Header Styles */
+/* This code has an id of logo that has a width of 100%. */
 #logo {
     width: 100%;
 }
 
 
-
+/* This code gives the header a background of a certain rgba, and a certain width. */
 header {
     background: rgba(8, 53, 136, 0.648);
     width: 100%;
 }
-
+/* This code gives the h1 of the section a font-family, font-size, color, margin-bottom, text-align and padding left. */
 section h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.5em;
@@ -47,35 +49,37 @@ section h1 {
     text-align: center;
     padding-left: 50px;
 }
-
+/* This code gives the element of label with the class of text to have a text color of white. */
 label.text {
     color: white;
 }
 
 /* Navigation Styles */
-
+/* This code gives the nav of the header a display of table and a width of 100%. */
 header>nav {
     display: table;
     width: 100%;
 }
-
+/* This code gives the hypertext link of the list of the nav to have a text decoration of none and a text color of a certain rgb. */
 nav li a {
     text-decoration: none;
     color: rgb(247, 247, 75);
 }
-
+/* This code gives the unordered list thats the direct child of nav thats the direct child of header to have a display of table-row and
+a list-style-type of none. */
 header>nav>ul {
     display: table-row;
     list-style-type: none;
 
 }
-
+/*This code gives the list thats the direct child of the unordered list thats the direct child of the nav thats the direct child of the 
+header to have a display of table-cell and a text align center. */
 header>nav>ul>li {
     display: table-cell;
     text-align: center;
 
 }
-
+/* This code makes it so that when you hover over the navigation list it turns into a certain color and it gives it a text shadow. */
 header nav ul li a:hover {
     color: white;
     text-shadow: rgb(51, 51, 51) 0px 0px 5px;
@@ -84,3 +88,9 @@ header nav ul li a:hover {
 
 
 /* Footer Styles */
+/* This code gives the footer a margin-left, and margin-right of auto and a padding-bottom of 10px; */
+footer{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}

@@ -4,6 +4,7 @@
       Filename:   forms.css */
 
 /* Form Layout Stlyes */
+/* This code added a little space in between the input boxes. */
 div.formRow {
       display: -webkit-flex;
       display: flex;
@@ -11,12 +12,13 @@ div.formRow {
       flex-flow: row wrap;
       margin: 7px 0px;
 }
+/* This code shifted my input boxes to all the way to the left on the rendered page.*/
 
 div.formRow>* {
       -webkit-flex: 1 1 150px;
       flex: 1 1 150px;
 }
-
+/* This code made the two fieldsets that I have wider on the rendered page. */
 form#survey {
       display: -webkit-flex;
       display: flex;
@@ -24,7 +26,8 @@ form#survey {
       flex-flow: row wrap;
 }
 
-
+/* This code added a certain background color to the fieldsets that I have, a border radius that curves the edges of the border, a flex,
+a font size, padding, margin and a border. */
 form#survey>fieldset {
       background-color: rgba(8, 53, 136, 0.648);
       border-radius: 15px;
@@ -35,22 +38,23 @@ form#survey>fieldset {
       margin: 30px;
       border: 1.5px solid rgb(247, 247, 75, 0.5);
 }
-
+/* This object sets the div with the class of object to have a display of flex. */
 div.object {
       display: flex;
       display: -webkit-flex;
 }
-
+/* This code shifts the drop down menus that i have on my rendered page all the way to the left. */
 div.object>* {
       flex: 1 1 150px;
       -webkit-flex: 1 1 150px;
 }
-
+/* This code adds a padding to the left of the form on the rendered page. */
 form#survey {
       padding-left: 150px;
 }
 
 /* Legend Styles */
+/* This code adds a certain background color to the legend of the fieldset. It also sets the text color to white and gives it a padding of 5px. */
 legend {
       background-color: rgba(0, 0, 255, 0.5);
       color: white;
@@ -58,8 +62,44 @@ legend {
 }
 
 /* Text Area Styles */
+/* This code gives the element of textarea a certain margin, height and width. */
 textarea {
       margin-top: 10px;
       height: 100px;
       width: 95%;
+}
+
+/* Form Button Styles */
+/* This code gives the id of buttons to align in the center in the rendered page. It also gave the div with the id of buttons to have a
+width of 100%. */
+div#buttons {
+      text-align: center;
+      width: 100%;
+  }
+/* This code gives the element of input a type of submit and reset, it also gives it a font size, padding and a margin. */
+  input[type="submit"],
+input[type="reset"] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 15px;
+}
+
+/* Validation Styles */
+/* This code gives the input, select and textarea a psuedo class of focus and a certain background color. */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgb(220, 255, 220);
+}
+/* This code gives all input elements to have a psuedo class focus and valid. It gives a background of a certain color, a check mark for
+when a input box is valid. */
+input#firstBox:focus:valid, input#lastBox:focus:valid, input#streetBox:focus:valid, input#cityBox:focus:valid, input#stateBox:focus:valid,
+input#zipBox:focus:valid, input#phoneBox:focus:valid {
+      background: rgb(220, 255, 220) url(mc_go.png) bottom right/contain no-repeat;     
+}
+/* This code gives all input elements to have a psuedo class focus and invalid. It gives a background of a certain color, an x for
+when a input box is invalid. */
+input#firstBox:focus:invalid, input#lastBox:focus:invalid, input#streetBox:focus:invalid, input#cityBox:focus:invalid, input#stateBox:focus:invalid,
+input#zipBox:focus:invalid, input#phoneBox:focus:invalid {
+      background: rgb(255, 232, 233) url(mc_stop.png) bottom right/contain no-repeat;
 }

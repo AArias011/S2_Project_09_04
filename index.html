@@ -7,6 +7,7 @@
   
         Filename:   index.html -->
 
+        <!-- This set of code gives the a title of millennium computers and links in different stylesheets and adds scripts. -->
     <meta charset="utf-8" />
     <title>Millennium Computers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +18,9 @@
 </head>
 
 <header>
+     <!-- This code sets an image in the header of the rendered page. -->
     <img src="mc_logo.png" alt="Millennium Computers" id="logo" />
-
+<!-- This code sets a naviation lists of home, my cart, my account and contact us.-->
     <nav class="hnav1">
         <ul>
             <li><a href="#">Home</a></li>
@@ -30,53 +32,59 @@
 </header>
 
 <section>
+    <!-- This set of code gives the section element an h1 of submit order form. -->
     <h1>Submit Order Form</h1>
-
+<!-- This set of code sets a form which sections out a part of the rendered page to have a certain fieldset.-->
     <form id="survey" action=" http://www.mill_computers.com/orders/process.cgi." method="post" name="cForm">
+        
         <fieldset class="paymentForm">
+            <!-- The legend element is basically a header for the fieldset element on the rendered page. -->
             <legend>Payment Form</legend>
+            <!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">First Name*</label>
-                <input type="text" name="fName" id="firstBox" />
+                <input type="text" name="fName" id="firstBox"required />
             </div>
-
+<!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">Last Name*</label>
-                <input type="text" name="lName" id="lastBox" />
+                <input type="text" name="lName" id="lastBox" required/>
             </div>
-
-
+<!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">Street Address*</label>
-                <input type="text" name="street" id="streetBox">
+                <input type="text" name="street" id="streetBox"required/>
             </div>
 
-
+<!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">City*</label>
-                <input type="text" name="city" id="cityBox" />
+                <input type="text" name="city" id="cityBox" required/>
             </div>
-
+<!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">State*</label>
-                <input type="text" name="state" id="stateBox" />
+                <input type="text" name="state" id="stateBox" required/>
             </div>
-
+<!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">Zip Code*</label>
-                <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" placeholder="nnnnn (-nnnn)" />
+                <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" placeholder="nnnnn (-nnnn)" required/>
             </div>
-
+<!-- This code gives a label of a certain text with and input which basically put its a text box for users to type in. -->
             <div class="formRow">
                 <label class="text" for="">Phone Number*</label>
-                <input type="text" name="phone" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ "
-                    placeholder="(nnn) nnn-nnn" />
+                <input type="tel" name="phone" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ "
+                    placeholder="(nnn) nnn-nnn" required/>
             </div>
         </fieldset>
 
         <fieldset class="paymentForm">
+            <!-- This code has a legend with certain text that acts as a header for the form. -->
             <legend>Computer Build</legend>
             <div class="object">
+                <!-- This code gives a label of certain text and a selection list with different options that the user is able to click on. 
+                This makes a drop down menu that gives the user options to choose one. -->
                 <label class="text" for="pSpeed">Processor Speed</label>
                 <select name="orderType" id="order">
                     <option value="3.2 GHz"> 3.2 GHz</option>
@@ -85,6 +93,8 @@
                 </select>
             </div>
             <br>
+            <!-- This code gives a label of certain text and a selection list with different options that the user is able to click on. 
+                This makes a drop down menu that gives the user options to choose one. -->
             <div class="object">
                 <label class="text" for="mem">Memory</label>
                 <select name="orderType" id="order">
@@ -95,6 +105,8 @@
                 </select>
             </div>
             <br>
+            <!-- This code gives a label of certain text and a selection list with different options that the user is able to click on. 
+                This makes a drop down menu that gives the user options to choose one. -->
             <div class="object">
                 <label class="text" for="monitor">Monitor Size</label>
                 <select name="orderType" id="order">
@@ -105,6 +117,8 @@
                 </select>
             </div>
             <br>
+            <!-- This code gives a label of certain text and a selection list with different options that the user is able to click on. 
+                This makes a drop down menu that gives the user options to choose one. -->
             <div class="object">
                 <label class="text" for="hd">Hard Drive</label>
                 <select name="orderType" id="order">
@@ -115,14 +129,17 @@
                 </select>
             </div>
             <br>
+            
             <div class="formRow">
                 <label class="text" for="dvd">DVD Burner</label>
-
+<!-- This code gives a label of certain text and it also gives an input with the type of radio, which makes the textbox into a circle that
+the user can press on.-->
                 <div>
                     <label class="text" for="Yes">Yes</label>
                     <input name="dvd" id="Yes" value="yes" type="radio">
                 </div>
-
+<!-- This code gives a label of certain text and it also gives an input with the type of radio, which makes the textbox into a circle that
+the user can press on.-->
                 <div>
                     <label class="text" for="No">No</label>
                     <input name="dvd" id="No" value="no" type="radio">
@@ -132,12 +149,14 @@
             <br>
             <div class="formRow">
                 <label class="text" for="tuner">Tuner Card</label>
-
+<!-- This code gives a label of certain text and it also gives an input with the type of radio, which makes the textbox into a circle that
+the user can press on.-->
                 <div>
                     <label class="text" for="Yes">Yes</label>
                     <input name="tuner" id="Yes" value="yes" type="radio">
-
                 </div>
+                <!-- This code gives a label of certain text and it also gives an input with the type of radio, which makes the textbox into a circle that
+the user can press on.-->
                 <div>
                     <label class="text" for="No">No</label>
                     <input name="tuner" id="No" value="no" type="radio">
@@ -147,12 +166,14 @@
             <br>
             <div class="formRow">
                 <label class="text" for="mcard">Media Card Reader</label>
-
+<!-- This code gives a label of certain text and it also gives an input with the type of radio, which makes the textbox into a circle that
+the user can press on.-->
                 <div>
                     <label class="text" for="Yes">Yes</label>
                     <input name="media" id="Yes" value="yes" type="radio">
-
                 </div>
+                <!-- This code gives a label of certain text and it also gives an input with the type of radio, which makes the textbox into a circle that
+the user can press on.-->
                 <div>
                     <label class="text" for="No">No</label>
                     <input name="media" id="No" value="no" type="radio">
@@ -160,17 +181,29 @@
 
             </div>
             <br>
+            <!-- This code sets a checkbox on the rendered page, and you can also put in text so that the user can know what they're 
+            checking. -->
             <div>
                 <input name="mailMe" id="mailCB" value="yes" type="checkbox">
                 <label class="text" for="mailCB">Add a 24-month extended warranty.</label>
             </div>
             <br>
+            <!-- This code is a textarea that bascially gives a big box for the user to type in. -->
             <div>
                 <label class="text" for="commBox">Additional informaion and comments:</label>
                 <textarea name="addInfo" id="commBox"></textarea>
             </div>
         </fieldset>
+
     </form>
 </section>
 
+<footer>
+<!-- This code gives a submit button, reset button and a contact me button on the rendered page. -->
+    <div id="buttons">
+        <input type="submit" value="Submit My Survey"/>
+        <input type="reset" value="Cancel"/>
+        <input type="submit" value="Contact Me"/>
+    </div>
+</footer>
 </html>
